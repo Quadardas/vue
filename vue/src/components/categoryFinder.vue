@@ -1,15 +1,14 @@
 <template>
   <div class="item">
     <div class="item_categories">
-      <h3>{{ category }}</h3>
-      <div class="item__pop" v-for="(item, key) in items" :key="key">
-        {{ item.title }}
-      </div>
+      <h2>{{ category }}</h2>
+      <itemCard v-for="item in items" :key="item" :item="item" />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { onBeforeMount, ref } from "vue";
+import itemCard from "./itemCard.vue";
 const items = ref();
 const props = defineProps<{
   category: string;
@@ -24,3 +23,14 @@ async function itemCat(event) {
   console.log(items.value);
 }
 </script>
+<style lang="scss" scoped>
+.item {
+  display: flex;
+
+  .item_categories {
+    display: flex;
+    h2 {
+    }
+  }
+}
+</style>
