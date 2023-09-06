@@ -3,8 +3,10 @@
     <div class="logo">LOGO</div>
     <div class="header__list">
       <ul>
-        <li class="header__link">Catalog</li>
-        <li class="header__link">Card</li>
+        <li class="header__link">
+          <router-link to="/catalog">Catalog</router-link>
+        </li>
+        <li class="header__link">Cart</li>
       </ul>
     </div>
   </div>
@@ -35,8 +37,13 @@
       display: flex;
       flex-direction: row;
 
-      li {
+      .header__link {
         margin: 0 20px;
+
+        a {
+          color: rgba(255, 255, 255, 0.87);
+          text-decoration: none;
+        }
       }
     }
   }
