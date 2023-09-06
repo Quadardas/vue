@@ -13,6 +13,6 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .item__card {
   width: 350px;
-  margin: 40px 40px;
+  margin: 20px 30px;
 }
 </style>

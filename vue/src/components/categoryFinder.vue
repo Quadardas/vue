@@ -1,7 +1,7 @@
 <template>
   <div class="item">
+    <h2>{{ category }}</h2>
     <div class="item_categories">
-      <h2>{{ category }}</h2>
       <itemCard v-for="item in items" :key="item" :item="item" />
     </div>
   </div>
@@ -25,10 +25,15 @@ async function itemCat(event) {
 </script>
 <style lang="scss" scoped>
 .item {
+  max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 
   .item_categories {
     display: flex;
+
     h2 {
     }
   }
