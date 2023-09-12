@@ -18,7 +18,7 @@ onBeforeMount(async () => {
 });
 async function itemCat(event) {
   items.value = await fetch(
-    `https://fakestoreapi.com/products/category/${event}?limit=5`
+    `https://fakestoreapi.com/products/category/${event}?limit=4`
   ).then((res) => res.json());
   console.log(items.value);
 }

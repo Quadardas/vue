@@ -41,8 +41,8 @@
         margin: 0 20px;
 
         a {
-          color: rgba(255, 255, 255, 0.87);
           text-decoration: none;
+          color: black;
         }
       }
     }
